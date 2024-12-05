@@ -17,7 +17,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # Install Alacritty terminal (with dependencies)
 sudo apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
-
+sudo apt install -y alacritty
 # Install Rust programming language
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
