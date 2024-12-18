@@ -34,4 +34,13 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Bind Enter to å in all modes
+vim.keymap.set("n", "<Enter>", "å")
+vim.keymap.set("i", "<Enter>", "å")
+vim.keymap.set("v", "<Enter>", "å")
 
+-- Map æ and ø to { and } in insert mode
+vim.keymap.set("i", "æ", "[")
+vim.keymap.set("i", "ø", "]")
+vim.keymap.set("i", "Æ", "{")
+vim.keymap.set("i", "Ø", "}")
