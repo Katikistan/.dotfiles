@@ -67,6 +67,8 @@ git checkout stable
 make CMAKE_BUILD_TYPE=RelWithDebInfo 
 cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 cd ~
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 # Optional: Install Docker (containerization tool)
 sudo apt install -y docker.io
 
