@@ -1,14 +1,6 @@
-require('rose-pine').setup({
-    disable_background = true
-})
+-- colors.lua
+vim.g.catppuccin_flavour = "frappe" -- You can choose between 'latte', 'frappe', 'macchiato', 'mocha'
 
-function ColorMyPencils(color) 
-	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
+-- Set the colorscheme
+vim.cmd [[colorscheme catppuccin]]
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-
-end
-
-ColorMyPencils()
