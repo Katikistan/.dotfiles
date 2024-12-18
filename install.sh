@@ -30,7 +30,7 @@ sudo apt install -y net-tools
 
 # Install Nmap for network exploration and security auditing
 sudo apt install -y nmap
-
+sudo apt install -y blueman 
 # Install netcat (utility for reading and writing network connections)
 sudo apt install -y netcat-openbsd
 
@@ -48,7 +48,7 @@ sudo apt install -y git
 
 # Install i3 window manager with necessary utilities
 sudo apt install -y i3 i3status dmenu i3lock xbacklight feh
-
+sudo apt install -y i3blocks
 # Install some useful utilities for i3 environment
 sudo apt install -y scrot # screenshot tool
 sudo apt install -y nitrogen # wallpaper setter
@@ -60,8 +60,11 @@ sudo apt install -y vlc
 sudo apt install -y firefox
 
 # Install visual editor (vim or nano or emacs based on preference)
-sudo apt install -y neovim
-
+sudo apt-get install -y ninja-build gettext cmake unzip curl build-essential
+git clone https://github.com/neovim/neovim
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo 
+cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
+cd ~
 # Optional: Install Docker (containerization tool)
 sudo apt install -y docker.io
 
@@ -69,7 +72,10 @@ sudo apt install -y docker-compose
 
 sudo apt install -y timeshift
 
+git clone https://github.com/Katikistan/.dotfiles.git
 mv ~/.dotfiles/i3 ~/.config/i3
+mv ~/.dotfiles/nvim/ ~/.config/nvim
+mv ~/.dotfiles/tmux/ ~/.config/tmux
 
 # Clean up
 sudo apt autoremove -y
