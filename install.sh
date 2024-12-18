@@ -62,7 +62,9 @@ sudo apt install -y firefox
 # Install visual editor (vim or nano or emacs based on preference)
 sudo apt-get install -y ninja-build gettext cmake unzip curl build-essential
 git clone https://github.com/neovim/neovim
-cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo 
+cd neovim 
+git checkout stable
+make CMAKE_BUILD_TYPE=RelWithDebInfo 
 cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 cd ~
 # Optional: Install Docker (containerization tool)
