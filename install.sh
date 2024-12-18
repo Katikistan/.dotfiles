@@ -72,7 +72,7 @@ sudo apt install -y docker-compose
 
 sudo apt install -y timeshift
 
-git clone https://github.com/Katikistan/.dotfiles.git
+
 mv ~/.dotfiles/i3 ~/.config/i3
 mv ~/.dotfiles/nvim/ ~/.config/nvim
 mv ~/.dotfiles/tmux/ ~/.config/tmux
