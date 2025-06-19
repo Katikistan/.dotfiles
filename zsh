@@ -90,6 +90,8 @@ source $ZSH/oh-my-zsh.sh
 
 export TMUX_CONF="./.config/tmux/.tmux.conf"
 
+export JAVA_HOME=/opt/jdk-21
+export PATH=$JAVA_HOME/bin:$PATH
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
