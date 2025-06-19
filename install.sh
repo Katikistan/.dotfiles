@@ -13,28 +13,27 @@ sudo apt install -y curl
 
 # Install Zsh shell and Oh-My-Zsh
 sudo apt install -y zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# MOVE ZSH CONFIG INTO ZSHRC
 
 # Install Alacritty terminal (with dependencies)
 sudo apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
 sudo apt install -y alacritty
-# Install Rust programming language
+
+# Install Rust 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-
-# conda
-curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 # Install net-tools (for networking tools like ifconfig)
 sudo apt install -y net-tools
 
-# Install Nmap for network exploration and security auditing
+# Install Nmap for network exploration
 sudo apt install -y nmap
+
 sudo apt install -y blueman 
 # Install netcat (utility for reading and writing network connections)
 sudo apt install -y netcat-openbsd
 
-# Install Wireshark (network protocol analyzer)
+# Install Wireshark
 sudo apt install -y wireshark
 
 # Install htop (interactive process viewer)
@@ -47,19 +46,27 @@ sudo apt install -y neofetch
 sudo apt install -y git
 
 # Install i3 window manager with necessary utilities
-sudo apt install -y i3 i3status dmenu i3lock xbacklight feh
+sudo apt install -y i3status dmenu xbacklight feh
 sudo apt install -y i3blocks
+sudo apt install -y sway
 # Install some useful utilities for i3 environment
 sudo apt install -y scrot # screenshot tool
 sudo apt install -y nitrogen # wallpaper setter
 
-# Install VLC media player (optional, for media playback)
-sudo apt install -y vlc
+# jdk
+curl -O https://download.oracle.com/java/24/latest/jdk-24_linux-x64_bin.tar.gz
+tar -xzf jdk-21*.tar.gz
+sudo mv jdk-21* /opt/
+source ~/.zshrc
 
-# Install Firefox web browser (optional)
+# python
+sudo apt-get install python3-pip
+
+
+sudo apt install -y vlc
 sudo apt install -y firefox
 
-# Install visual editor (vim or nano or emacs based on preference)
+# nvim
 sudo apt-get install -y ninja-build gettext cmake unzip curl build-essential
 git clone https://github.com/neovim/neovim
 cd neovim 
@@ -69,15 +76,16 @@ cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 cd ~
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-# Optional: Install Docker (containerization tool)
-sudo apt install -y docker.io
 
+# install docker
+sudo apt install -y docker.io
 sudo apt install -y docker-compose
 
+# backup
 sudo apt install -y timeshift
 
 
-mv ~/.dotfiles/i3 ~/.config/i3
+mv ~/.dotfiles/i3 ~/.config/sway
 mv ~/.dotfiles/nvim/ ~/.config/nvim
 mv ~/.dotfiles/tmux/ ~/.config/tmux
 
