@@ -22,6 +22,9 @@ input "type:mouse" {
     natural_scroll enabled
 }
 
+# autotiling
+exec_always autotiling
+
 # Your preferred terminal emulator
 set $term alacritty
 
@@ -132,7 +135,7 @@ for_window [app_id="thunar"] floating enable, move position center, resize set 9
     bindsym $mod+shift+w exec pkill -SIGUSR2 waybar
 
     # Call the browser variable and launch it with $mod+b
-    bindsym $mod+b $web-browser
+    bindsym $mod+b exec $web-browser
     # Alacritty config with Catppuccin Mocha theme and custom settings
 
 # env:
