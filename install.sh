@@ -9,7 +9,7 @@ sudo apt install -y --no-install-recommends \
     curl wget ca-certificates gnupg lsb-release apt-transport-https \
     git unzip zip tar jq stow \
     build-essential \
-    cmake \
+    cmake make ripgrep xclip gcc \
     ninja-build \
     pkg-config \
     gettext \
