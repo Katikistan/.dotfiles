@@ -1,0 +1,5 @@
+source ~/tools/gef/gef.py
+
+set pagination off
+set confirm off
+set disassembly-flavor intel
