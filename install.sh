@@ -11,6 +11,7 @@ sudo apt install -y --no-install-recommends \
     build-essential \
     cmake make ripgrep xclip gcc \
     ninja-build \
+    meson \
     pkg-config \
     gettext \
     htop
@@ -239,6 +240,14 @@ cd $HOME/tools/cutter
 wget https://github.com/rizinorg/cutter/releases/download/v2.4.1/Cutter-v2.4.1-Linux-Qt5-x86_64.AppImage
 chmod +x Cutter-v2.4.1-Linux-Qt5-x86_64.AppImage
 mv Cutter-v2.4.1-Linux-Qt5-x86_64.AppImage cutter
+
+**Rizin**
+cd $HOME/tools/
+git clone https://github.com/rizinorg/rizin
+$ meson setup build
+$ meson compile -C build
+$ sudo meson install -C build
+
 
 TODO:
 Run 'chsh -s $(which zsh)' to set Zsh as default shell  
