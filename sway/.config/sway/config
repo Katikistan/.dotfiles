@@ -145,7 +145,7 @@ for_window [app_id="thunar"] floating enable, move position center, resize set 9
     bindsym $mod+q kill
 
     # Logout menu (wlogout)
-    bindsym ctrl+alt+delete exec wlogout
+    bindsym Ctrl+mod1+Delete exec wlogout
 
     # Start your launcher
     bindsym $mod+d exec $menu
