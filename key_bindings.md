@@ -16,6 +16,8 @@
 | `$mod + d`         | Launch application menu (`fuzzel`) |
 | `$mod + v`         | Paste clipboard via fuzzel         |
 | `$mod + Shift + x` | Lock screen (`swaylock`)           |
+| `Ctrl + Alt + Delete` | Logout menu (wlogout)           |
+
 
 ---
 
