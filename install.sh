@@ -143,16 +143,13 @@ sudo apt install -y --no-install-recommends \
     gdb \
     gdbserver \
     binutils \
-    radare2 \
     strace \
     ltrace \
     valgrind \
-    qemu \
     qemu-user \
     qemu-user-static \
     qemu-system \
     yara \
-    upx \
     binwalk \
     gcc-multilib \
     g++-multilib
@@ -174,12 +171,10 @@ echo "Installing cybersecurity tools"
 sudo apt install -y --no-install-recommends \
     aircrack-ng \
     hydra \
-    nikto \
     gobuster \
     sqlmap \
     hashcat \
     john \
-    lynis
 
 echo "Setting up Python"
 sudo apt install -y --no-install-recommends \
