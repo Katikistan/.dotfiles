@@ -82,13 +82,6 @@ echo "Installing Oh My Zsh"
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 fi
-# zsh autosuggestions
-if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
-    git clone https://github.com/zsh-users/zsh-autosuggestions \
-        "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
-fi
-
-
 
 sudo apt install -y brightnessctl pulseaudio pavucontrol
 

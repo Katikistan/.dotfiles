@@ -12,7 +12,7 @@ export LESS='-R'
 
 ZSH_THEME="robbyrussell"
 
-plugins=(zsh-autosuggestions git docker docker-compose nmap rust golang)
+plugins=(git docker docker-compose nmap rust golang)
 
 source $ZSH/oh-my-zsh.sh
 
